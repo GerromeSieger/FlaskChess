@@ -31,4 +31,4 @@ jobs:
         script: |
           cd /home/ubuntu/FlaskChess
           git pull origin master
-          sudo systemctl restart gunicorn.service
+          python3 flask_app.py &
