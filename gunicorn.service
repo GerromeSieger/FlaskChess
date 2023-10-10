@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/flask
-Environment="PATH=/home/ubuntu/flask/venv/bin"
-ExecStart=/home/ubuntu/flask/venv/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
+WorkingDirectory=/home/ubuntu/FlaskChess
+Environment="PATH=/home/ubuntu/venv/bin"
+ExecStart=/home/ubuntu/venv/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
