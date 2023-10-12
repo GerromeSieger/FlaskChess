@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User=ec2-user
-Group=www-data
+Group=root
 WorkingDirectory=/home/ec2-user/FlaskChess
 Environment="PATH=/home/ec2-user/venv/bin"
 ExecStart=/home/ec2-user/venv/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
